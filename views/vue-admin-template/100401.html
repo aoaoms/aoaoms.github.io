@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vue-admin-template 跨域实时接口联调 | aoaobaba的博客</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/headurl.png">
+    <meta name="description" content="I dream it. I work hard. I grind till I own it.">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="preload" href="/assets/css/0.styles.8c7132e2.css" as="style"><link rel="preload" href="/assets/js/app.cdd67c5a.js" as="script"><link rel="preload" href="/assets/js/4.b451b9ea.js" as="script"><link rel="preload" href="/assets/js/1.ca1bd9a0.js" as="script"><link rel="preload" href="/assets/js/17.0e2e239c.js" as="script"><link rel="prefetch" href="/assets/js/10.af0d76bb.js"><link rel="prefetch" href="/assets/js/11.5e72ad9a.js"><link rel="prefetch" href="/assets/js/12.4435a7a8.js"><link rel="prefetch" href="/assets/js/13.6a515739.js"><link rel="prefetch" href="/assets/js/14.84bdf5c5.js"><link rel="prefetch" href="/assets/js/15.c6ed65e0.js"><link rel="prefetch" href="/assets/js/16.78160759.js"><link rel="prefetch" href="/assets/js/18.7c55aa30.js"><link rel="prefetch" href="/assets/js/19.980bc0f0.js"><link rel="prefetch" href="/assets/js/20.10142ae4.js"><link rel="prefetch" href="/assets/js/21.8f7813a3.js"><link rel="prefetch" href="/assets/js/5.8af5b97b.js"><link rel="prefetch" href="/assets/js/6.d3cb8ee2.js"><link rel="prefetch" href="/assets/js/7.cd52c7d9.js"><link rel="prefetch" href="/assets/js/8.0d2e3f6b.js"><link rel="prefetch" href="/assets/js/9.4865d751.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.f168756a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8c7132e2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-19557b78><div data-v-19557b78><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-19557b78 data-v-19557b78><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-19557b78 data-v-19557b78><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>aoaobaba的博客</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>aoaobaba</span>
+            
+          <span data-v-64685f0e>2019 - </span>
+          2020
+        </a></span></div></div> <div class="hide" data-v-19557b78><header class="navbar" data-v-19557b78><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/headme.png" alt="aoaobaba的博客" class="logo"> <span class="site-name">aoaobaba的博客</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/iview-admin 2.0/" class="nav-link"><i class="iconfont undefined"></i>
+  iview-admin 2.0
+</a></li><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/jfinal/" class="nav-link"><i class="iconfont undefined"></i>
+  jfinal
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue-element-admin/" class="nav-link"><i class="iconfont undefined"></i>
+  vue-element-admin
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue-admin-template/" class="nav-link"><i class="iconfont undefined"></i>
+  vue-admin-template
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vuepress/" class="nav-link"><i class="iconfont undefined"></i>
+  vuepress
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="https://github.com/aoaoms" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-19557b78></div> <aside class="sidebar" data-v-19557b78><div class="personal-info-wrapper" data-v-b038cec6><!----> <h3 class="name" data-v-b038cec6>
+    aoaobaba
+  </h3> <div class="num" data-v-b038cec6><div data-v-b038cec6><h3 data-v-b038cec6>7</h3> <h6 data-v-b038cec6>Article</h6></div> <div data-v-b038cec6><h3 data-v-b038cec6>11</h3> <h6 data-v-b038cec6>Tag</h6></div></div> <hr data-v-b038cec6></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/iview-admin 2.0/" class="nav-link"><i class="iconfont undefined"></i>
+  iview-admin 2.0
+</a></li><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/jfinal/" class="nav-link"><i class="iconfont undefined"></i>
+  jfinal
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue-element-admin/" class="nav-link"><i class="iconfont undefined"></i>
+  vue-element-admin
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue-admin-template/" class="nav-link"><i class="iconfont undefined"></i>
+  vue-admin-template
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vuepress/" class="nav-link"><i class="iconfont undefined"></i>
+  vuepress
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="https://github.com/aoaoms" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>vue-admin-template 跨域实时接口联调</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/views/vue-admin-template/100401.html#开篇" class="sidebar-link">开篇</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/vue-admin-template/100401.html#关于此篇" class="sidebar-link">关于此篇</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/vue-admin-template/100401.html#动手前的准备" class="sidebar-link">动手前的准备</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/vue-admin-template/100401.html#修改proxy代理" class="sidebar-link">修改proxy代理</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/vue-admin-template/100401.html#接口规格匹配一致" class="sidebar-link">接口规格匹配一致</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/vue-admin-template/100401.html#测试登录" class="sidebar-link">测试登录</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/views/vue-admin-template/100401.html#修改login-vue进行测试" class="sidebar-link">修改login.vue进行测试</a></li></ul></li><li><a href="/views/vue-admin-template/100401.html#测试获取用户信息" class="sidebar-link">测试获取用户信息</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/vue-admin-template/100401.html#分离获取用户权限接口" class="sidebar-link">分离获取用户权限接口</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/views/vue-admin-template/100401.html#新建获取用户权限接口" class="sidebar-link">新建获取用户权限接口</a></li><li class="sidebar-sub-header"><a href="/views/vue-admin-template/100401.html#分离动态路由处理权限的代码" class="sidebar-link">分离动态路由处理权限的代码</a></li><li class="sidebar-sub-header"><a href="/views/vue-admin-template/100401.html#设置动态路由鉴权码" class="sidebar-link">设置动态路由鉴权码</a></li><li class="sidebar-sub-header"><a href="/views/vue-admin-template/100401.html#接口返回鉴权码" class="sidebar-link">接口返回鉴权码</a></li><li class="sidebar-sub-header"><a href="/views/vue-admin-template/100401.html#测试获取鉴权码" class="sidebar-link">测试获取鉴权码</a></li></ul></li><li><a href="/views/vue-admin-template/100401.html#完结" class="sidebar-link">完结</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/vue-admin-template/100401.html#友链" class="sidebar-link">友链</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-19557b78><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>vue-admin-template 跨域实时接口联调</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>aoaobaba</span>
+            
+          <span data-v-64685f0e>2019 - </span>
+          2020
+        </a></span></div></div> <div data-v-19557b78><main class="page"><div class="page-title" style="display:none;"><h1>vue-admin-template 跨域实时接口联调</h1> <hr> <div data-v-484a899e><i class="iconfont reco-account" data-v-484a899e><span data-v-484a899e>aoaobaba</span></i> <i class="iconfont reco-date" data-v-484a899e><span data-v-484a899e>2019-10-04</span></i> <i class="iconfont reco-eye" data-v-484a899e><span id="/views/vue-admin-template/100401.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-484a899e><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="iconfont reco-tag tags" data-v-484a899e><span class="tag-item" data-v-484a899e>
+      vue-element-admin
+    </span><span class="tag-item" data-v-484a899e>
+      proxy
+    </span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><p></p><div class="table-of-contents"><ul><li><a href="#开篇">开篇</a></li><li><a href="#关于此篇">关于此篇</a></li><li><a href="#动手前的准备">动手前的准备</a></li><li><a href="#修改proxy代理">修改proxy代理</a></li><li><a href="#接口规格匹配一致">接口规格匹配一致</a></li><li><a href="#测试登录">测试登录</a><ul><li><a href="#修改login-vue进行测试">修改login.vue进行测试</a></li></ul></li><li><a href="#测试获取用户信息">测试获取用户信息</a></li><li><a href="#分离获取用户权限接口">分离获取用户权限接口</a><ul><li><a href="#新建获取用户权限接口">新建获取用户权限接口</a></li><li><a href="#分离动态路由处理权限的代码">分离动态路由处理权限的代码</a></li><li><a href="#设置动态路由鉴权码">设置动态路由鉴权码</a></li><li><a href="#接口返回鉴权码">接口返回鉴权码</a></li><li><a href="#测试获取鉴权码">测试获取鉴权码</a></li></ul></li><li><a href="#完结">完结</a></li><li><a href="#友链">友链</a></li></ul></div><p></p> <h2 id="开篇"><a href="#开篇" aria-hidden="true" class="header-anchor">#</a> 开篇</h2> <p>作者最近在使用<a href="https://github.com/aoaoms/vue-element-admin" target="_blank" rel="noopener noreferrer">vue-element-admin<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 框架写一个电商后台管理系统；前端初级学员一枚。希望借此框架的具体实践，能够对于前端开发技能有进一步的提高。这个框架确实挺好的，开源并持续维护了几年了。<a href="https://github.com/aoaoms/vue-element-admin" target="_blank" rel="noopener noreferrer">github<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> star也是杠杠的！欢迎支持，为作者点赞！</p> <h2 id="关于此篇"><a href="#关于此篇" aria-hidden="true" class="header-anchor">#</a> 关于此篇</h2> <p>前一篇介绍了初步运行此框架模板应用，了解了从登录到菜单路由导航的概要实现。动态路由很好的运用于系统鉴权的实现。而此篇，目标是要完成实时接口访问后端开发环境，用联调接口的方式来继续后面的开发。由于，作者本人后端使用<a href="http://www.jfinal.com/" target="_blank" rel="noopener noreferrer">JFinal<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>技术栈 主要完成后排的API 服务，开发接口速度之快，使得联调接口更加的方便实现；数据更加的贴合实际。目标：</p> <ul><li>配置代理完成前端axios请求转发到后端测试接口</li> <li>完成登录、获取用户信息、获取用户权限、动态路由加载导航菜单流程</li></ul> <h2 id="动手前的准备"><a href="#动手前的准备" aria-hidden="true" class="header-anchor">#</a> 动手前的准备</h2> <p>还是要看下框架作者写的几篇上手手册<a href="https://juejin.im/post/59097cd7a22b9d0065fb61d2" target="_blank" rel="noopener noreferrer">手摸手，带你用vue撸后台<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> ；感谢作者，前端的老鸟。其中<a href="https://juejin.im/post/595b4d776fb9a06bbe7dba56" target="_blank" rel="noopener noreferrer">第四篇<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 简单的说了下使用webpack 的proxy实现跨域请求转发。当然，我们自己也可以想一想。框架不可能做到与你后台实际的接口规范一致，里面涉及了一些硬编码还需要自己依据实际项目接口做调整。下面，我们就一步步做起来。</p> <h2 id="修改proxy代理"><a href="#修改proxy代理" aria-hidden="true" class="header-anchor">#</a> 修改proxy代理</h2> <p>文件路径：./vue.config.js ;我按照自己项目后台的服务地址http://localhost 做了以下修改：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code>proxy<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">// process.env.VUE_APP_BASE_API ---------&gt;  /dev-api</span>
+      <span class="token comment">// change xxx-api/login =&gt; mock/login</span>
+      <span class="token comment">// detail: https://cli.vuejs.org/config/#devserver-proxy</span>
+      <span class="token punctuation">[</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">VUE_APP_BASE_API</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        target<span class="token punctuation">:</span> <span class="token string">'http://localhost'</span><span class="token punctuation">,</span>
+        changeOrigin<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        pathRewrite<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token punctuation">[</span><span class="token string">'^'</span> <span class="token operator">+</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">VUE_APP_BASE_API</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token string">''</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><blockquote><p>上面的process.env.VUE_APP_BASE_API 是前端项目的开发服务地址 实际上是一个字串'dev-api'；项目里面定义了2个环境编码，一个是开发的，一个是生产的，以编码标记 后续打包用到。项目开发地址在此配置文件里面也有说明，默认开启本机9528端口。
+而我后台的开发服务地址是本机80端口，所以在目标target属性里面改为 'http://localhost'; 上面的配置意思为：所有/dev-api 的请求地址会转发到http://localhost ;也就是原始请求地址是 http://localhost:9528/dev-api/****** 修改后变为 http://localhost/dev-api 。下面的pathRewrite 再配置重写地址为将/dev-api替换为空字符，那么代理后的地址就变成了 http://localhost/你的请求地址。这就与我们后端开发的服务接口一样啦。</p></blockquote> <h2 id="接口规格匹配一致"><a href="#接口规格匹配一致" aria-hidden="true" class="header-anchor">#</a> 接口规格匹配一致</h2> <p>框架自己硬编码的地址、参数和请求拦截处理可能与你的后台地址不一样，这里需要改下。例如本人的登录接口地址为/login/dologin ；框架里面的是/user/login 。这就需要改改了。重要的一点，就是请求的响应拦截处理。本人在修改了接口后，登录还是一致报错，后来发现是框架封装了axios请求响应，其封装的逻辑与本人后端的接口服务响应规范不一致，处罚了异常。
+框架的请求响应封装如下：文件：./src/utils/request.js</p> <div class="language-js{ 4 } line-numbers-mode"><pre class="language-text"><code>response =&gt; {
+    const res = response.data
+
+    // if the custom code is not 20000, it is judged as an error.
+
+    // i used jfinal Ret,it is juged as an error if return state is not 'ok' or http response status is not 200
+    // if (res.code !== 20000) {
+    if ((res.state !== 'ok') &amp;&amp; (response.status !== 200)) {
+      Message({
+        message: res.message || 'Error',
+        type: 'error',
+        duration: 5 * 1000
+      })
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><blockquote><p>以上代码，我做了修改。框架原来封装响应处理做了硬编码 返回值不等于20000 的异常处理。而我的项目请求响应存在2种情况，一种是响应一个对象字串，其中包括状态state说明。另一种是直接响应http status=200,返回json数据。
+所以，这里我改了判断异常的条件。</p></blockquote> <p>我看了下登录这块儿大致有以下几点，需要注意调整：</p> <ul><li>接口地址匹配</li> <li>接口参数（框架封装了请求 里面包含header固定传参token处理并且属性名为X-Token；注意与自己项目使用是否一致）</li> <li>响应封装修改</li> <li>响应的数据格式写入(主要是提交请求后 你自己项目的返回数据需要与框架里面调用并处理token配合调整)</li></ul> <h2 id="测试登录"><a href="#测试登录" aria-hidden="true" class="header-anchor">#</a> 测试登录</h2> <p>经过以上的代理配置，以及请求封装的修改后。开始测试以下登录操作：</p> <h3 id="修改login-vue进行测试"><a href="#修改login-vue进行测试" aria-hidden="true" class="header-anchor">#</a> 修改login.vue进行测试</h3> <p>文件路径：/src/views/login.vue ；自动填上账号和密码 便于调试：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>return {
+      loginForm: {
+        username: 'admin',
+        password: '****************'
+      },
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>处理登录的事件，添加打印输出：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>handleLogin() {
+      this.$refs.loginForm.validate(valid =&gt; {
+        if (valid) {
+          this.loading = true
+          this.$store.dispatch('user/login', this.loginForm).then(() =&gt; {
+            // 登录成功
+            const token = getToken()
+            console.log('---------------&gt; done loginForm ,token is ' + token)
+            this.$router.push({ path: this.redirect || '/' })
+            this.loading = false
+          }).catch(() =&gt; {
+            this.loading = false
+          })
+        } else {
+          console.log('error submit!!')
+          return false
+        }
+      })
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><blockquote><p>以上代码可以看出 登录完成的逻辑。经过输入验证后，<a href="https://vuex.vuejs.org/zh/" target="_blank" rel="noopener noreferrer">store<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 分配用户登录Action进行异步处理。这里我添加处理成功则控制台输出获取到的token 。正常处理登录成功后，下一步是路由的跳转：</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 这行代码会触发路由的beforeEach钩子函数 里面进行后续获取用户信息以及动态路由的操作
+this.$router.push({ path: this.redirect || '/' })
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><img src="https://github.com/aoaoms/public-ansets/raw/master/element-admin/testLogin.png" alt="测试登录"></p> <p>使用谷歌开发工具，查看登录处理输出结果。查看网络处理内容。可以看到，点击login按钮后发生了错误，系统停止处理。步骤1网络请求doLogin 处理成功，控制台输出了获取到的token 。步骤2 网络处理请求 getUserInfo 处理返回也是成功的response head status 200 ；但是控制台输出了错误信息：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>vue.runtime.esm.js:619 [Vue warn]: data functions should return an object:
+https://vuejs.org/v2/guide/components.html#data-Must-Be-a-Function
+
+(found in &lt;Root&gt;)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><blockquote><p>这个错误应该是请求成功后的响应结果处理出现了问题，提报这个data需要返回一个对象。那么可能是我实际接口返回的数据系统在接收处理结果时类型错误导致。下节我们细看一下代码，作修正。</p></blockquote> <h2 id="测试获取用户信息"><a href="#测试获取用户信息" aria-hidden="true" class="header-anchor">#</a> 测试获取用户信息</h2> <p>上节已经提到用户登录接口已处理成功。下一步在geUserInfo信息接口处理时抛出了异常。此接口调用在路由的beforeEach 钩子里面触发：文件路径：./permission.js</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 路由钩子函数
+router.beforeEach(async(to, from, next) =&gt; {
+  // start progress bar
+  NProgress.start()
+
+  // set page title
+  document.title = getPageTitle(to.meta.title)
+
+  // determine whether the user has logged in
+  const hasToken = getToken()
+
+  // aoaobaba: bug fixed,,, learn to: https://www.cnblogs.com/fqh123/p/11094296.html
+  if (to.path === from.path) {
+    next()
+    return
+  }
+
+  // aoaobaba: Listen for forward and next browser events
+  window.addEventListener('popstate', function() {
+    // backStatus = true
+    return
+  })
+
+  if (hasToken) {
+    if (to.path === '/login') {
+      // if is logged in, redirect to the home page
+      next({ path: '/' })
+      NProgress.done()
+    } else {
+      // determine whether the user has obtained his permission roles through getInfo
+      const hasRoles = store.getters.roles &amp;&amp; store.getters.roles.length &gt; 0
+      if (hasRoles) {
+        next()
+      } else {
+        try {
+          // get user info
+          // note: roles must be a object array! such as: ['admin'] or ,['developer','editor']
+          const { roles } = await store.dispatch('user/getInfo')
+
+          // generate accessible routes map based on roles
+          const accessRoutes = await store.dispatch('permission/generateRoutes', roles)
+
+          // dynamically add accessible routes
+          router.addRoutes(accessRoutes)
+
+          // hack method to ensure that addRoutes is complete
+          // set the replace: true, so the navigation will not leave a history record
+          next({ ...to, replace: true })
+        } catch (error) {
+          // remove token and go to login page to re-login
+          await store.dispatch('user/resetToken')
+          Message.error(error || 'Has Error')
+          next(`/login?redirect=${to.path}`)
+          NProgress.done()
+        }
+      }
+    }
+  } else {
+    /* has no token*/
+
+    if (whiteList.indexOf(to.path) !== -1) {
+      // in the free login whitelist, go directly
+      next()
+    } else {
+      // other pages that do not have permission to access are redirected to the login page.
+      next(`/login?redirect=${to.path}`)
+      NProgress.done()
+    }
+  }
+})
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br></div></div><blockquote><p>以上代码可以看到 在get user info 处理过程中，声明了返回结果必须是个对象。通过store 分配action 'user/getinfo' 的处理结果需要返回一个对象。那么我们就去看下此action的处理：
+文件路径：./src/store/modules/user.js</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>// get user info
+  getInfo({ commit, state }) {
+    return new Promise((resolve, reject) =&gt; {
+      getInfo().then(response =&gt; {
+        const { data } = response
+
+        if (!data) {
+          reject('Verification failed, please Login again.')
+        }
+
+        const { roles, name, avatar } = data
+
+        // roles must be a non-empty array
+        if (!roles || roles.length &lt;= 0) {
+          reject('getInfo: roles must be a non-null array!')
+        }
+
+        commit('SET_ROLES', roles)
+        commit('SET_NAME', name)
+        commit('SET_AVATAR', avatar)
+        resolve(data)
+      }).catch(error =&gt; {
+        reject(error)
+      })
+    })
+  },
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><blockquote><p>上面代码中 <code>const { data } = response</code> 这里处理请求返回的对象解构得到data新的对象属性，这里与我实际接口返回时冲突的。我的接口直接返回一个json字串对象，在请求响应拦截封装里面返回的；可以看下reques.js里面的请求响应拦截器处理。这个接口可以直接解构response对象，获得里面的属性。另外，我的项目此接口是不会返回用户角色信息<code>role</code> 属性，因此这里还要取消<code>role</code>的处理。按自己接口定义的属性修改一下。这里处理权限相关的代码<code>commit('SET_ROLES', roles)</code> 我们先注释掉，后续这个接口服务需要独立出来。
+修改后的代码：</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>// get user info
+  getInfo({ commit, state }) {
+    return new Promise((resolve, reject) =&gt; {
+      getInfo().then(response =&gt; {
+        const data = response
+
+        if (!data) {
+          reject('Verification failed, please Login again.')
+        }
+
+        const { name, avatar } = data
+
+        // roles must be a non-empty array
+        // if (!roles || roles.length &lt;= 0) {
+        //   reject('getInfo: roles must be a non-null array!')
+        // }
+
+        // commit('SET_ROLES', roles)
+        commit('SET_NAME', name)
+        commit('SET_AVATAR', avatar)
+
+        console.log('---------------&gt; well done  getinfo')
+        resolve(data)
+      }).catch(error =&gt; {
+        reject(error)
+      })
+    })
+  }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><p>控制台输出</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>----------------&gt; done login
+index.vue?fe92:151 ---------------&gt; done loginForm ,token is eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjIsImlzcyI6Im1hbGxhcGkiLCJleHAiOjE1NzAzMzE0NjIsImlhdCI6MTU3MDI0NTA2Mn0.hq6Q7Rjm8OMKLXxZzRE0xMuxHRw4KRBPPFuaG554aa
+user.js:85 ---------------&gt; well done  getinfo
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>data 声明直接指向response。 然后解构属性 name, avatar进行store设置处理。</p></blockquote> <hr> <p>以上getinfo接口处理返回了用户基本信息和权限。但实际项目的话，最好将其分成不同的接口提供服务；因为用户权限接口使用会更频繁，用户信息接口数据大部分项目会获取一次会缓存到本地。</p> <h2 id="分离获取用户权限接口"><a href="#分离获取用户权限接口" aria-hidden="true" class="header-anchor">#</a> 分离获取用户权限接口</h2> <h3 id="新建获取用户权限接口"><a href="#新建获取用户权限接口" aria-hidden="true" class="header-anchor">#</a> 新建获取用户权限接口</h3> <ul><li>新增api<div class="language- line-numbers-mode"><pre class="language-text"><code>// 获取用户鉴权码
+export function getUserPermission() {
+return request({
+  url: '/user/getUserPermission',
+  method: 'get'
+  })
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div></li> <li>新增store action
+<blockquote><p>我的项目获取用户鉴权码 请求返回一个array，类似 [a,b,c,d,d.....]</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>// get user permission
+getUserPermission({ commit, state }) {
+  return new Promise((resolve, reject) =&gt; {
+    getUserPermission().then(response =&gt; {
+      const roles = response
+
+      if (!roles) {
+        reject('Verification failed, please Login again.')
+      }
+      // roles must be a non-empty array
+      if (!roles || roles.length &lt;= 0) {
+        reject('getUserPermission: roles must be a non-null array!')
+      }
+
+      commit('SET_ROLES', roles)
+      console.log('---------------&gt; well done  getUserPermission')
+      resolve(roles)
+    }).catch(error =&gt; {
+      reject(error)
+    })
+  })
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div></li></ul> <h3 id="分离动态路由处理权限的代码"><a href="#分离动态路由处理权限的代码" aria-hidden="true" class="header-anchor">#</a> 分离动态路由处理权限的代码</h3> <p>路径：./permission.js</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// get user info
+// note: roles must be a object array! such as: ['admin'] or ,['developer','editor']
+await store.dispatch('user/getInfo')
+
+// aoaobaba add: dispatch action to get user permission! roles is an array! example: [a,b,c,d,e.....]
+const roles = await store.dispatch('user/getUserPermission')
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><blockquote><p>这添加了处理用户鉴权码的action</p></blockquote> <h3 id="设置动态路由鉴权码"><a href="#设置动态路由鉴权码" aria-hidden="true" class="header-anchor">#</a> 设置动态路由鉴权码</h3> <p>路径：./src/router/index.js
+<code>为了方便测试我们统一先给admin用户返回鉴权码 [wang],前端动态路由鉴权表里面的roles 属性也一同修改为[wang] 进行测试。</code></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>export const asyncRoutes = [
+  {
+    path: '/goods',
+    component: Layout,
+    redirect: '/goods/goodsCate',
+    name: 'Goods',
+    meta: {
+      title: '商品管理',
+      icon: 'nested',
+      roles: ['wang']
+    },
+    children: [
+      {
+        path: 'goodsCate',
+        name: 'GoodsCate',
+        meta: { title: '货品类目', roles: ['wang'] },
+        component: () =&gt; import('@/views/goods/goodsCate') // Parent router-view
+      },
+      {
+        path: 'goodsSpec',
+        name: 'GoodsSpec',
+        meta: { title: '货品规格', roles: ['wang'] },
+        component: () =&gt; import('@/views/table/index') // Parent router-view
+      }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><h3 id="接口返回鉴权码"><a href="#接口返回鉴权码" aria-hidden="true" class="header-anchor">#</a> 接口返回鉴权码</h3> <h3 id="测试获取鉴权码"><a href="#测试获取鉴权码" aria-hidden="true" class="header-anchor">#</a> 测试获取鉴权码</h3> <p>运行登录
+<img src="https://github.com/aoaoms/public-ansets/raw/master/element-admin/testGetPermission.png" alt="测试获取鉴权动态路由"></p> <blockquote><p>以上截图，是修改代码后的测试结果。作者定义了几个鉴权路由菜单，这里也刷出来了。注意查看 Cookies里面已经缓存了会话token。日志里面也输出了action 正常处理完成啦。</p></blockquote> <h2 id="完结"><a href="#完结" aria-hidden="true" class="header-anchor">#</a> 完结</h2> <p>今天大致完成了框架修改，连接自己的开发接口服务进行实时接口数据联调开发；并进行了用户登录、获取用户信息、动态路由鉴权的场景。由于前后端都是作者一个人，所以做起来统一好安排。如果是项目团队，前端还是使用Mock数据服务好些。</p> <h2 id="友链"><a href="#友链" aria-hidden="true" class="header-anchor">#</a> 友链</h2> <ul><li><p><a href="http://www.jfinal.com/" target="_blank" rel="noopener noreferrer">Jfinal<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li> <li><p><a href="https://github.com/aoaoms/vue-element-admin" target="_blank" rel="noopener noreferrer">vue-element-admin<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li></ul></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-44bd5a18 data-v-44bd5a18><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-44bd5a18><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-44bd5a18></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-44bd5a18></path></svg></div></div></div>
+    <script src="/assets/js/app.cdd67c5a.js" defer></script><script src="/assets/js/4.b451b9ea.js" defer></script><script src="/assets/js/1.ca1bd9a0.js" defer></script><script src="/assets/js/17.0e2e239c.js" defer></script>
+  </body>
+</html>
